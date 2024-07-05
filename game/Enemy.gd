@@ -21,17 +21,6 @@ func move_to_random_position():
 	pos = round(rng.randf_range(1, 3))
 	update_position()
 
-#func move(direction):
-#	if(direction < 0):
-#		if(pos == 1):
-#			return
-#		pos -= 1	
-#	if(direction > 0):
-#		if(pos == 3):
-#			return
-#		pos += 1
-#	update_position()
-
 func update_position():
 	if(pos == 1):
 		position.x = pos1
