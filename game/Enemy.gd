@@ -18,7 +18,7 @@ func _process(delta):
 	pass
 
 func move_to_random_position():
-	pos = rng.randf_range(1, 3)
+	pos = round(rng.randf_range(1, 3))
 	update_position()
 
 #func move(direction):

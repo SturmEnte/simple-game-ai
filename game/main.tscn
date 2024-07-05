@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0yotf5etr7pr"]
+[gd_scene load_steps=6 format=3 uid="uid://c0yotf5etr7pr"]
 
 [ext_resource type="Texture2D" uid="uid://dmekrd7nxtw1o" path="res://assets/player.png" id="1_shhid"]
+[ext_resource type="Script" path="res://main.gd" id="1_y4snp"]
 [ext_resource type="Script" path="res://Player.gd" id="2_385vi"]
 [ext_resource type="Texture2D" uid="uid://c17jtiph83wds" path="res://assets/enemy.png" id="2_lyaf7"]
 [ext_resource type="Script" path="res://Enemy.gd" id="4_bavu5"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_y4snp")
 
 [node name="Player" type="Sprite2D" parent="."]
 position = Vector2(160, 480)
