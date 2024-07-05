@@ -1,8 +1,8 @@
 extends Sprite2D
 
 var pos1 = 160
-var pos2 = 160 * 2
-var pos3 = 160 * 3
+var pos2 = 160 * 3
+var pos3 = 160 * 5
 
 var pos = 1
 
@@ -33,4 +33,9 @@ func move(direction):
 	update_position()
 
 func update_position():
-	pass
+	if(pos == 1):
+		position.x = pos1
+	elif(pos == 2):
+		position.x = pos2
+	elif(pos == 3):
+		position.x = pos3
