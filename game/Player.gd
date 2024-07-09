@@ -7,13 +7,13 @@ var fields_y = 3
 var pos_x = 1
 var pos_y = 1
 
-func _ready():
-	pass
+#func _ready():
+	#pass
+#
+#func _process(delta):
+	#pass
 
-func _process(delta):
-	pass
-
-func _input(event):
+func _input(_event):
 	var x = 0
 	var y = 0
 	

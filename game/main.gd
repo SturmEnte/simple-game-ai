@@ -13,6 +13,6 @@ func _ready():
 	else:
 		print("Error: Enemy does not have required method for the game to work")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+## Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+	#pass
