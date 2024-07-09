@@ -51,4 +51,3 @@ func move(dir_x, dir_y):
 
 func update_position():
 	position = Vector2((texture.get_width() * scale.x / 2) + (pos_x - 1) * texture.get_width() * scale.x, (texture.get_height() * scale.y / 2) + (pos_y - 1) * texture.get_height() * scale.y)
-
