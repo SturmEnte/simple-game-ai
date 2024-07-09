@@ -1,30 +1,25 @@
 extends Sprite2D
 
-var pos1 = 160
-var pos2 = 160 * 3
-var pos3 = 160 * 5
-
-var pos = 1
+var pos_x = 1
+var pos_y = 1
 
 var rng = RandomNumberGenerator.new()
 
-## Called when the node enters the scene tree for the first time.
 #func _ready():
 	#pass # Replace with function body.
 #
-#
-## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 	#pass
 
 func move_to_random_position():
-	pos = round(rng.randf_range(1, 3))
+	while true:
+		pos_x = round(rng.randf_range(1, get_parent().fields_x))
+		pos_y = round(rng.randf_range(1, get_parent().fields_y))
+		
+		if get_parent().player.pos_x != pos_x and get_parent().player.pos_y != pos_y:
+			break
+	
 	update_position()
 
 func update_position():
-	if(pos == 1):
-		position.x = pos1
-	elif(pos == 2):
-		position.x = pos2
-	elif(pos == 3):
-		position.x = pos3
+	position = Vector2((texture.get_width() * scale.x / 2) + (pos_x - 1) * texture.get_width() * scale.x, (texture.get_height() * scale.y / 2) + (pos_y - 1) * texture.get_height() * scale.y)

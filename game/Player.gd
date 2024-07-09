@@ -1,6 +1,5 @@
 extends Sprite2D
 
-# New position system
 var pos_x = 1
 var pos_y = 1
 
