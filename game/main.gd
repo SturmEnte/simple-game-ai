@@ -3,6 +3,9 @@ extends Node2D
 var player
 var enemy
 
+var fields_x = 3
+var fields_y = 3
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_node("Player")

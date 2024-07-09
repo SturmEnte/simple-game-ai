@@ -1,9 +1,6 @@
 extends Sprite2D
 
 # New position system
-var fields_x = 3
-var fields_y = 3
-
 var pos_x = 1
 var pos_y = 1
 
@@ -36,11 +33,11 @@ func move(dir_x, dir_y):
 		pos_x -= 1
 	
 	# Right
-	if dir_x > 0 and pos_x < fields_x:
+	if dir_x > 0 and pos_x < get_parent().fields_x:
 		pos_x += 1
 	
 	# Down
-	if dir_y < 0 and pos_y < fields_y:
+	if dir_y < 0 and pos_y < get_parent().fields_y:
 		pos_y += 1
 	
 	# Up
