@@ -1,12 +1,5 @@
 extends Sprite2D
 
-# Old
-var pos1 = 160
-var pos2 = 160 * 3
-var pos3 = 160 * 5
-
-var pos = 1
-
 # New position system
 var fields_x = 3
 var fields_y = 3
@@ -14,12 +7,9 @@ var fields_y = 3
 var pos_x = 1
 var pos_y = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
@@ -62,22 +52,3 @@ func move(dir_x, dir_y):
 func update_position():
 	position = Vector2((texture.get_width() * scale.x / 2) + (pos_x - 1) * texture.get_width() * scale.x, (texture.get_height() * scale.y / 2) + (pos_y - 1) * texture.get_height() * scale.y)
 
-# Old
-#func move(direction):
-	#if(direction < 0):
-		#if(pos == 1):
-			#return
-		#pos -= 1	
-	#if(direction > 0):
-		#if(pos == 3):
-			#return
-		#pos += 1
-	#update_position()
-
-#func update_position():
-	#if(pos == 1):
-		#position.x = pos1
-	#elif(pos == 2):
-		#position.x = pos2
-	#elif(pos == 3):
-		#position.x = pos3
