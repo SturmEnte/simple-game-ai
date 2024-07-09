@@ -5,12 +5,6 @@ var pos_y = 1
 
 var rng = RandomNumberGenerator.new()
 
-#func _ready():
-	#pass # Replace with function body.
-#
-#func _process(delta):
-	#pass
-
 func move_to_random_position():
 	while true:
 		pos_x = round(rng.randf_range(1, get_parent().fields_x))

@@ -6,7 +6,6 @@ var target
 var fields_x = 3
 var fields_y = 3
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_node("Player")
 	target = get_node("Target")
@@ -16,6 +15,7 @@ func _ready():
 	else:
 		print("Error: Target does not have required method for the game to work")
 
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
+func _process(delta):
+	
+	if player.pos_x == target.pos_x and player.pos_y == target.pos_y:
+		target.move_to_random_position()
