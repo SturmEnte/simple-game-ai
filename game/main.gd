@@ -16,6 +16,5 @@ func _ready():
 		print("Error: Target does not have required method for the game to work")
 
 func _process(delta):
-	
 	if player.pos_x == target.pos_x and player.pos_y == target.pos_y:
 		target.move_to_random_position()
